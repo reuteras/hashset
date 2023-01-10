@@ -1,20 +1,24 @@
 # Hash sets
 
-Scripts to create hash sets for Linux and Windows.
+Scripts to create hash sets for Linux and Windows for use in DFIR investigations with [Autopsy][aut] and similar tools.
 
-## Linux hash sets of known files for Autopsy
+## Installation
 
-A package for creating hash set of known Linux files for use in [Autopsy]. Can't store the generated files on GitHub due to the size of the files. To download files for Ubuntu 20.04 LTS (x86 and x64) you will need almost 300 GB of disk space.
-
-### Usage
-
-Download the repo:
+Download this repo:
 
     git clone https://github.com/reuteras/hashset.git
 
-Install dependencies:
+Install dependencies on Linux:
 
     sudo apt install apt-mirror sleuthkit
+
+Install dependencies on macOS with [Homebrew][hbr]:
+
+    brew uninstall sleuthkit
+
+## Linux hash sets of known files for Autopsy
+
+Can't store the generated files on GitHub due to the large size of the generated files. Observe that To download the files for Ubuntu 20.04 LTS (x86 and x64) you will need almost 300 GB of disk space.
 
 To create an index for Ubuntu 20.04 run
 
@@ -34,6 +38,14 @@ After downloading the Ubuntu repo and extracting md5sums from deb-packages the r
 
 Uses the data from [AndrewRathbun/VanillaWindowsReference][vwr] to get the md5 hash.
 
+To create an index for Windows:
+
+    cd hashset
+    ./generate-windows-hash-set.sh
+
+Afterwards the index files are located in the *output* directory.
+
   [aut]: https://github.com/sleuthkit/autopsy
+  [hbr]: https://brew.sh
   [vwr]: https://github.com/AndrewRathbun/VanillaWindowsReference
 
