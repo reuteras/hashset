@@ -18,7 +18,7 @@ Install dependencies on macOS with [Homebrew][hbr]:
 
 ## Linux hash sets of known files for Autopsy
 
-Can't store the generated files on GitHub due to the large size of the generated files. Observe that To download the files for Ubuntu 20.04 LTS (x86 and x64) you will need almost 300 GB of disk space.
+Can't store the generated files on GitHub due to the large size of the generated files. Observe that to download the files for Ubuntu 20.04 LTS (x86 and x64) you will need almost 300 GB of disk space.
 
 To create an index for Ubuntu 20.04 run
 
