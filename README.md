@@ -14,7 +14,7 @@ Install dependencies on Linux:
 
 Install dependencies on macOS with [Homebrew][hbr]:
 
-    brew uninstall sleuthkit
+    brew install sleuthkit
 
 ## Linux hash sets of known files for Autopsy
 
