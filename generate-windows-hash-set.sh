@@ -34,6 +34,11 @@ echo "Create hash set from VanillaWindowsReference."
 echo "####################################################"
 echo ""
 
+if [[ -d "${CURRENT_NAME}" ]]; then
+	cd "${CURRENT_NAME}"
+	git pull
+	cd ..
+fi
 [[ ! -d "${CURRENT_NAME}" ]] && git clone https://github.com/AndrewRathbun/VanillaWindowsReference
 [[ ! -d "${OUTPUT}" ]] && mkdir -p "${OUTPUT}"
 
