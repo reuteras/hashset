@@ -45,7 +45,12 @@ To create an index for Windows:
 
 Afterwards the index files are located in the *output* directory.
 
+## Alternatives
+
+A interesting alternative is [hashr][has] by Google even though it is more complex to setup.
+
   [aut]: https://github.com/sleuthkit/autopsy
+  [has]: https://github.com/google/hashr
   [hbr]: https://brew.sh
   [vwr]: https://github.com/AndrewRathbun/VanillaWindowsReference
 
