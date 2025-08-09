@@ -28,18 +28,20 @@ function cleanup() {
 trap cleanup EXIT
 cleanup
 
-echo ""
-echo "####################################################"
-echo "Create hash set from VanillaWindowsReference."
-echo "####################################################"
-echo ""
+echo "[+] Create hash set from VanillaWindowsReference."
 
 if [[ -d "${CURRENT_NAME}" ]]; then
-	cd "${CURRENT_NAME}"
-	git pull
-	cd ..
+    cd "${CURRENT_NAME}"
+    echo "[+] Old checkout of VanillaWindowsReference exits - get updates"
+    git pull > /dev/null 2>&1
+    cd ..
 fi
-[[ ! -d "${CURRENT_NAME}" ]] && git clone https://github.com/AndrewRathbun/VanillaWindowsReference
+
+if [[ ! -d "${CURRENT_NAME}" ]]; then
+    echo "[+] Clone VanillaWindowsReference repository"
+    git clone https://github.com/AndrewRathbun/VanillaWindowsReference > /dev/null 2>&1
+fi
+
 [[ ! -d "${OUTPUT}" ]] && mkdir -p "${OUTPUT}"
 
 find VanillaWindowsReference -type f -name "*.csv" -exec cat {} \; | \
