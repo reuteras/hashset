@@ -30,6 +30,14 @@ After downloading the Ubuntu repo and extracting md5sums from deb-packages the r
     $ ls output/ubuntu_2004-md5*
     output/ubuntu_2004-md5  output/ubuntu_2004-md5-md5.idx  output/ubuntu_2004-md5-md5.idx2
 
+## Create hashset from hashes in ClamAV
+
+Use Docker and run the following command:
+
+```
+docker run -it --rm --name debian -v .:/data debian /data/clamav.sh
+```
+
 ### TODO
 
 - Country selection for mirror should be done in config.
