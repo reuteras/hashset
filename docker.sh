@@ -1,6 +1,7 @@
 #!/bin/bash
 
 [[ -d /data/clamav ]] || mkdir -p /data/clamav
+[[ -d /data/output ]] || mkdir -p /data/output
 [[ -d /tmp ]] || mkdir -p /tmp
 
 echo "[+] Update apt and install tools"
