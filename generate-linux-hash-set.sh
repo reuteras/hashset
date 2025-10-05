@@ -64,10 +64,12 @@ echo ""
 [[ ! -d "${MIRROR}/data" ]] && mkdir -p "${MIRROR}/data"
 [[ ! -d "${OUTPUT}" ]] && mkdir -p "${OUTPUT}"
 
+# shellcheck disable=SC2002
 cat "${CONF}/apt-mirror-${CURRENT_NAME}.list" | sed -e "s#/var/spool/apt-mirror#${MIRROR}/data#" > "${CONF}/apt-mirror-${CURRENT_NAME}-run.list"
 apt-mirror "${CONF}/apt-mirror-${CURRENT_NAME}-run.list"
 
 IFS=$'\n'
+# shellcheck disable=SC2044
 for package in $(find "${MIRROR}" -name '*.deb' -newer "${MIRROR}/${CURRENT_NAME}-done" ); do
     dpkg-deb --ctrl-tarfile "${package}" | tar Oxf  - ./md5sums >> "${OUTPUT}/${CURRENT_NAME}-md5.new" 2> /dev/null
 done

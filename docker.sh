@@ -8,6 +8,7 @@ echo "[+] Update apt and install tools"
 DEBIAN_FRONTEND=noninteractive apt -qqq update > /dev/null 2>&1
 DEBIAN_FRONTEND=noninteractive apt -qqqy install file git p7zip-full pipx sleuthkit > /dev/null 2>&1
 pipx ensurepath > /dev/null 2>&1
+# shellcheck disable=SC1091
 source /root/.bashrc
 pipx install uv > /dev/null 2>&1
 uv tool install cvdupdate > /dev/null 2>&1

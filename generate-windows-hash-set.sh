@@ -31,10 +31,10 @@ cleanup
 echo "[+] Create hash set from VanillaWindowsReference."
 
 if [[ -d "${CURRENT_NAME}" ]]; then
-    cd "${CURRENT_NAME}"
+    cd "${CURRENT_NAME}" || exit
     echo "[+] Old checkout of VanillaWindowsReference exits - get updates"
     git pull > /dev/null 2>&1
-    cd ..
+    cd .. || exit
 fi
 
 if [[ ! -d "${CURRENT_NAME}" ]]; then
