@@ -33,14 +33,13 @@ After downloading the Ubuntu repo and extracting md5sums from deb-packages the r
 ### TODO
 
 - Country selection for mirror should be done in config.
-
-# Create smaller hashsets in Docker
+- Create smaller hashsets in Docker
 
 ## Create hashset from hashes in ClamAV and hashes for Windows
 
 Use Docker and run the following command:
 
-```
+```bash
 docker run -it --rm --name debian -v .:/data debian /data/docker.sh
 ```
 
