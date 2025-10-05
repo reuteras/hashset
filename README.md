@@ -39,9 +39,7 @@ After downloading the Ubuntu repo and extracting md5sums from deb-packages the r
 
 Use Docker and run the following command:
 
-```bash
-docker run -it --rm --name debian -v .:/data debian /data/docker.sh
-```
+    docker run -it --rm --name debian -v .:/data debian /data/docker.sh
 
 Uses the data from [AndrewRathbun/VanillaWindowsReference][vwr] to get the md5 hash for Windows.
 
