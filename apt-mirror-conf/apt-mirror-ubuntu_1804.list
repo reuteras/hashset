@@ -28,4 +28,3 @@ deb-i386 http://se.archive.ubuntu.com/ubuntu bionic-backports main restricted un
 deb-i386 http://se.archive.ubuntu.com/ubuntu bionic-security main restricted
 deb-i386 http://se.archive.ubuntu.com/ubuntu bionic-security universe
 deb-i386 http://se.archive.ubuntu.com/ubuntu bionic-security multiverse
-

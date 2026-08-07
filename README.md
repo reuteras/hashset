@@ -53,4 +53,3 @@ A interesting alternative is [hashr][has] by Google even though it is more compl
   [has]: https://github.com/google/hashr
   [hbr]: https://brew.sh
   [vwr]: https://github.com/AndrewRathbun/VanillaWindowsReference
-
